@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticaret Fenerbahçe Ürünleri</title>
+    <link rel="stylesheet" href="galatasaray.css">
+</head>
+<body>
+    <div class="menu-icerik">
+        <ul>
+            <li><a href="fenerbahce.html">FENERBAHÇE</a></li>
+            <li><a href="galatasaray.html">GALATASARAY</a></li>
+            <li><a href="besıktas.html">BEŞİKTAŞ</a></li>
+            <li><a href="trabzonspor.html">TRABZONSPOR</a></li>
+            <li class="sepetim"><a href="sepet.html">SEPETİM</a></li>
+        </ul>
+    </div>
+       <script src="test.js"></script>
+    <script>
+    $(document).ready(function(){
+    const ürünName=["PARÇALI FORMA","DEPLASMAN FORMA","GALATASARAY FORMA","KALECİ FORMA","ERKEK CEKET","ERKEK YAĞMURLUK","GS T-SHİRT","LOGO T-SHİRT","ANTRENMAN T-SHİRT","KADIN T-SHİRT","EŞOFMAN TAKIMI","KADIN POLO T-SHİRT","LOGOLU SWEATSHİRT","GALATASARAY TUNİK","KADIN GALA T-SHİRT","ARAÇ YASTIĞI","SIRT ÇANTASI","GALATASARAY ŞAPKA"];
+    const ürünPrice=[399,399,399,399,799,699,479,189,399,69,429,129,144,149,79,53,269,89];
+    const ürünimage=["galatasaray_forma1.png","galatasaray_forma2.png","galatasaray_forma3.png","galatasaray_kaleciforma.png","galatasaray_erkekceket.png","galatasaray_yagmurluk.png","galatasaray_tişört1.png","galatasaray_tişört2.png","galatasaray_tişört3.png","galatasaray_tişört5.png","galatasaray_esofmantakım.png","galatasaray_kadıntisort.png","galatasaray_sweatshirt2.png","galatasaray_tunik.png","galatasaray_tişört4.png","galatasaray_yastık.png","galatasaray_canta.png","galatasaray_sapka.png"];
+    var html='';
+    $.multiply(ürünName,ürünPrice,ürünimage);
+            for(let i=0;i<ürünName.length;i++)
+                {
+             html+=' <div class="col">';
+           html+=' <div class="card">';
+             html+=' <img src="resimler/'+ürünimage[i]+'" class="card-img-top" alt="...">';
+             html+=' <div class="card-body">';
+              html+='  <h5 class="card-title" style="text-align: center;">'+ürünName[i]+'</h5>';
+             html+='   <p class="card-text" style="text-align: center;">'+ürünPrice[i]+'.00 TL</p>';
+              html+='<p><button data-key="GS.'+i+'">Sepete ekle</button></p>';
+                    html+='<div id="'+i+'"></div>';
+            html+='  </div>';
+          html+='  </div>';
+        html+='  </div>';
+        }
+          document.getElementById("uruncoluns").innerHTML=html;
+    })
+    </script>
+    <div style="width: 75%;margin-left: auto;margin-right: auto"> 
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="uruncoluns">
+</div>
+</div>
+ 
+</body>
+</html>

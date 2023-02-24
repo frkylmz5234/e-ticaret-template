@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticaret Fenerbahçe Ürünleri</title>
+    <link rel="stylesheet" href="trabzonspor.css">
+</head>
+<body>
+    <div class="menu-icerik">
+        <ul>
+            <li><a href="fenerbahce.html">FENERBAHÇE</a></li>
+            <li><a href="galatasaray.html">GALATASARAY</a></li>
+            <li><a href="besıktas.html">BEŞİKTAŞ</a></li>
+            <li><a href="trabzonspor.html">TRABZONSPOR</a></li>
+            <li class="sepetim"><a href="sepet.html">SEPETİM</a></li>
+        </ul>
+    </div>
+       <script src="test.js"></script>
+    <script>
+    $(document).ready(function(){
+    const ürünName=["ÇUBUKLU FORMA","MAVİ FORMA","TELKARE FORMA","ERKEK KABAN","ERKEK KABAN","ERKEK YELEK","POLO YAKA T-SHİRT","POLO YAKA T-SHİRT","POLO YAKA T-SHİRT","MAVİ T-SHİRT","BORDO T-SHİRT","BEYAZ T-SHİRT","BEBEK TAKIM","BEBEK GOOL TAKIM","ANAHTARLIK","TS SIRT ÇANTASI","TRABZON KASKET","KADIN TS PARFÜM"];
+    const ürünPrice=[299,299,299,899,899,599,279,279,279,149,149,149,49,74,24,124,149,79];
+    const ürünimage=["trabzon_forma1.jfif","trabzon_forma2.jpg","trabzon_forma3.jfif","trabzon_mont1.jpg","trabzon_mont2.jpg","trabzon_yelek.jpg","trabzon_polo1.jfif","trabzon_polo2.jfif","trabzon_polo3.jfif","trabzon_kadıntisört1.jpg","trabzon_kadıntisört2.jpg","trabzon_kadıntisört3.jpg","trabzon_bebek1.jpg","trabzon_bebek2.jpg","trabzon_anahtarlık.jpeg","trabzon_canta.jpg","trabzon_kasket.jpg","trabzon_parfüm.jpg"];
+    var html='';
+    $.multiply(ürünName,ürünPrice,ürünimage);
+            for(let i=0;i<ürünName.length;i++)
+                {
+             html+=' <div class="col">';
+           html+=' <div class="card">';
+             html+=' <img src="resimler/'+ürünimage[i]+'" class="card-img-top" alt="...">';
+             html+=' <div class="card-body">';
+              html+='  <h5 class="card-title" style="text-align: center;">'+ürünName[i]+'</h5>';
+             html+='   <p class="card-text" style="text-align: center;">'+ürünPrice[i]+'.00 TL</p>';
+              html+='<p><button data-key="TS.'+i+'">Sepete ekle</button></p>';
+                    html+='<div id="'+i+'"></div>';
+            html+='  </div>';
+          html+='  </div>';
+        html+='  </div>';
+        }
+          document.getElementById("uruncoluns").innerHTML=html;
+    })
+    </script>
+    <div style="width: 75%;margin-left: auto;margin-right: auto"> 
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="uruncoluns">
+</div>
+</div>
+ 
+</body>
+</html>

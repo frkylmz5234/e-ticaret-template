@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./resimler/besıktas_arkaplan.jpg");
+}
+.menu-icerik {
+    text-align: center;
+}
+.menu-icerik ul {
+    display: inline-flex;
+    list-style: none;
+}
+.menu-icerik ul li {
+    width: 300px;
+    margin: 40px;
+    padding: 25px;
+    border: 4px solid black;
+    border-radius: 6px;
+    background: rgb(147, 167, 173);
+    cursor: pointer;
+}
+.menu-icerik ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+.menu-icerik ul li:hover {
+    background: white;
+}
+.menu-icerik .sepetim {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.uclu {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    max-width: 350px;
+    border: 3px solid black;
+    margin: auto;
+    position: relative;
+    font-family: arial;
+    margin-top: 50px;
+    float: left;
+    background-color: white;
+    width: 300px;
+    perspective: 1000px;
+    padding: 20px;
+}
+.card h1 {
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+.fıyat {
+    font-size: 20px;
+    padding: 10px;
+}
+.acıklama {
+    font-size: 12px;
+    padding: 10px;
+}
+.card button {
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 14px;
+    cursor: pointer;
+}
+.card button:hover {
+    opacity: 2;
+    background-color: white;
+    color: black;
+}
